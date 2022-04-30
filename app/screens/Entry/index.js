@@ -1,12 +1,46 @@
 import React from 'react';
-import { Text } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Button } from 'react-native';
+
+import { Container } from '../../components';
+import { Form } from './components';
+import { GenericStyles } from '../../utils/GenericStyles';
+import { useForm } from 'react-hook-form';
 
 const AddEntryScreen = () => {
+  const {
+    control,
+    handleSubmit,
+    getValues,
+    setValue,
+    register,
+    formState: { errors },
+  } = useForm();
+
+  const submitHandler = data => console.log(data);
+
+  const renderMainChild = () => {
+    return (
+      <Form
+        control={control}
+        values={getValues}
+        setValue={setValue}
+        register={register}
+        errors={errors}
+      />
+    );
+  };
+
+  const renderRightHeaderChild = () => {
+    return <Button title="Submit" onPress={handleSubmit(submitHandler)} />;
+  };
+
   return (
-    <SafeAreaView>
-      <Text>This is my Add Entry Screen</Text>
-    </SafeAreaView>
+    <Container
+      mainChildStyle={GenericStyles.phMain}
+      text="Refueling"
+      mainChild={renderMainChild()}
+      rightHeaderChild={renderRightHeaderChild()}
+    />
   );
 };
 
