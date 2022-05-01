@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-native';
 
 import { CardBasic, Container } from '../../components';
 import { Form } from './components';

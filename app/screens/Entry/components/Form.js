@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 import { Controller } from 'react-hook-form';
 import { GenericStyles } from '../../../utils/GenericStyles';
