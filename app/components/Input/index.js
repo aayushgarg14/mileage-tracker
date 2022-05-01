@@ -50,7 +50,7 @@ const InputBasic = ({
         />
       </View>
       {error && (
-        <View style={GenericStyles.mt4}>
+        <View style={[GenericStyles.mt4, GenericStyles.ml4]}>
           <Text style={[GenericStyles.redColor, GenericStyles.fontS]}>
             {errorText}
           </Text>

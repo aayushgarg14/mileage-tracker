@@ -6,6 +6,7 @@ import styles from './styles';
 const TextBasic = ({
   isBold,
   isLarge,
+  isLight,
   isSmall,
   text,
   numberOfLines,
@@ -21,6 +22,7 @@ const TextBasic = ({
       isBold && GenericStyles.bold,
       isLarge && GenericStyles.fontL,
       isSmall && GenericStyles.fontS,
+      isLight && GenericStyles.lightColor,
       textStyle,
     ]}>
     {text}

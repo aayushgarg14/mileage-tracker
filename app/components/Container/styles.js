@@ -6,11 +6,11 @@ const STATUSBAR_DEFAULT_HEIGHT = 40;
 export default StyleSheet.create({
   contentContainer: {
     flex: 1,
-    backgroundColor: StyleConstants.color.$PRIMARY,
+    backgroundColor: StyleConstants.color.$DARK,
   },
   contentTopContainer: {
     flex: 1,
-    backgroundColor: StyleConstants.color.$PRIMARY,
+    backgroundColor: StyleConstants.color.$DARK,
     paddingTop: 20,
   },
   statusBarContainer: {

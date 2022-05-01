@@ -4,12 +4,15 @@ import { StatusBar, View } from 'react-native';
 import TextBasic from '../Text';
 
 import styles from './styles';
-import { StyleConstants } from '../../utils/GenericStyles';
+import { GenericStyles, StyleConstants } from '../../utils/GenericStyles';
+import IconBasic from '../Icon';
+import { goBack } from '../../navigation/RootNavigation';
 
 const Container = ({
   text,
   mainChild,
   bottomChild,
+  isBackBtn,
   rightHeaderChild,
   mainChildStyle,
 }) => {
@@ -26,12 +29,23 @@ const Container = ({
     <>
       <View style={styles.statusBarContainer}>
         <StatusBar
-          backgroundColor={StyleConstants.color.$PRIMARY}
+          backgroundColor={StyleConstants.color.$DARK}
           barStyle="light-content"
         />
       </View>
       <View style={styles.headerContainer}>
-        <TextBasic text={text} isBold isLarge />
+        <View style={[GenericStyles.fdr, GenericStyles.aic]}>
+          {isBackBtn ? (
+            <IconBasic
+              name="arrowBack"
+              color="#FFF"
+              fontSize={20}
+              iconStyle={GenericStyles.mr16}
+              onPress={goBack}
+            />
+          ) : null}
+          <TextBasic text={text} isBold isLarge />
+        </View>
         {rightHeaderChild}
       </View>
     </>
