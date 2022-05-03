@@ -5,8 +5,12 @@ import { Form } from './components';
 import { GenericStyles } from '../../utils/GenericStyles';
 import { useForm } from 'react-hook-form';
 import IconBasic from '../../components/Icon';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateListAction } from '../../store/app/action';
 
 const AddEntryScreen = () => {
+  const dispatch = useDispatch();
+  const list = useSelector(state => state.app.list);
   const {
     control,
     handleSubmit,
@@ -16,7 +20,22 @@ const AddEntryScreen = () => {
     formState: { errors },
   } = useForm();
 
-  const submitHandler = data => console.log(data);
+  console.log('list', list);
+
+  const submitHandler = data => {
+    console.log(data);
+    dispatch(
+      updateListAction({
+        heading: 'Refueling',
+        displayPrice: `Rs. ${data.cost}`,
+        price: parseInt(data.cost, 10),
+        day: 'Monday, 02',
+        date: '2021-05-02',
+        month: 'may',
+        id: new Date().getTime(),
+      }),
+    );
+  };
 
   const renderMainChild = () => {
     return (
