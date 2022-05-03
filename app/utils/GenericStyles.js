@@ -36,6 +36,7 @@ const GenericStyles = StyleSheet.create({
   mr16: { marginRight: 16 },
   phMain: { paddingHorizontal: 16 },
 
+  fontXS: { fontSize: 10 },
   fontS: { fontSize: 12 },
   fontM: { fontSize: 14 },
   fontL: { fontSize: 16 },
@@ -46,13 +47,22 @@ const GenericStyles = StyleSheet.create({
   redColor: {
     color: StyleConstants.color.$RED,
   },
+  blueColor: {
+    color: StyleConstants.color.$BLUE,
+  },
 
   primaryBGColor: {
     backgroundColor: StyleConstants.color.$PRIMARY,
   },
-
+  blueBGColor: {
+    backgroundColor: StyleConstants.color.$BLUE,
+  },
   darkBGColor: {
     backgroundColor: StyleConstants.color.$DARK,
+  },
+
+  blueBorderColor: {
+    borderColor: StyleConstants.color.$BLUE,
   },
 
   // Flex

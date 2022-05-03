@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-  list: [{ month: 'May 2021', key: 'may', data: [] }],
+  list: [{ title: 'May 2021', key: 'may', data: [] }],
 };
 
 const appReducer = (state = INITIAL_STATE, action) => {

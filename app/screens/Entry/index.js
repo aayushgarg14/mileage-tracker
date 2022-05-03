@@ -26,9 +26,10 @@ const AddEntryScreen = () => {
     console.log(data);
     dispatch(
       updateListAction({
-        heading: 'Refueling',
-        displayPrice: `Rs. ${data.cost}`,
-        price: parseInt(data.cost, 10),
+        ...data,
+        title: 'Refueling',
+        displayCost: `Rs. ${data.cost}`,
+        cost: parseInt(data.cost, 10),
         day: 'Monday, 02',
         date: '2021-05-02',
         month: 'may',

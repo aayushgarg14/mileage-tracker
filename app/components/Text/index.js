@@ -7,7 +7,9 @@ const TextBasic = ({
   isBold,
   isLarge,
   isLight,
+  isBlue,
   isSmall,
+  isSmaller,
   text,
   numberOfLines,
   onPress,
@@ -22,7 +24,9 @@ const TextBasic = ({
       isBold && GenericStyles.bold,
       isLarge && GenericStyles.fontL,
       isSmall && GenericStyles.fontS,
+      isSmaller && GenericStyles.fontXS,
       isLight && GenericStyles.lightColor,
+      isBlue && GenericStyles.blueColor,
       textStyle,
     ]}>
     {text}

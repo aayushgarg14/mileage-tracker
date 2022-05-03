@@ -32,7 +32,7 @@ const Form = ({ control, values, setValue, errors }) => {
             control={control}
             render={({ field: { onChange, onBlur, value } }) => (
               <InputBasic
-                label="Odometer (mi)"
+                label="Odometer (km)"
                 value={value}
                 error={errors?.odometer}
                 errorText={errors?.odometer?.message}

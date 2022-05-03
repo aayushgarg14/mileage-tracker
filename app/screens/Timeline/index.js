@@ -1,16 +1,43 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SectionList } from 'react-native';
+import { useSelector } from 'react-redux';
+
 import { navigate } from '../../navigation/RootNavigation';
+import { Container, FabBasic } from '../../components';
+import { GenericStyles } from '../../utils/GenericStyles';
+import { ItemContainer, ItemHeader } from './components';
 
 const TimelineScreen = () => {
+  const list = useSelector(state => state.app.list);
+  console.log('list', list);
+
+  const renderBottomChild = () => {
+    return <FabBasic onPress={() => navigate('AddEntry')} />;
+  };
+
+  const renderItem = ({ item }) => <ItemContainer data={item} />;
+
+  const renderSectionHeader = ({ section: { title } }) => (
+    <ItemHeader title={title} />
+  );
+
+  const renderMainChild = () => {
+    return (
+      <SectionList
+        sections={list}
+        keyExtractor={(item, index) => item + index}
+        renderItem={renderItem}
+        renderSectionHeader={renderSectionHeader}
+      />
+    );
+  };
+
   return (
-    <SafeAreaView>
-      <Text>This is my Timeline Screen</Text>
-      <TouchableOpacity onPress={() => navigate('AddEntry')}>
-        <Text>Add</Text>
-      </TouchableOpacity>
-    </SafeAreaView>
+    <Container
+      mainChildStyle={GenericStyles.phMain}
+      mainChild={renderMainChild()}
+      bottomChild={renderBottomChild()}
+    />
   );
 };
 
