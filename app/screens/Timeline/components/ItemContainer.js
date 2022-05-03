@@ -21,12 +21,12 @@ const ItemContainer = ({ data }) => {
       <View style={GenericStyles.ml16}>
         <TextBasic text={item.title} />
         <View style={GenericStyles.mt4}>
-          <TextBasic text={item.day} isSmall isLight />
+          <TextBasic text={item.displayDate} isSmall isLight />
         </View>
         <View style={[GenericStyles.fdr, GenericStyles.aic, GenericStyles.mt4]}>
           <IconBasic name="speedometer" />
           <View style={GenericStyles.ml4}>
-            <TextBasic text={item.odometer} isSmall isLight />
+            <TextBasic text={item.displayOdometer} isSmall isLight />
           </View>
         </View>
       </View>

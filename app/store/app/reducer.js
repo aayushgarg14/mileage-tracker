@@ -1,21 +1,38 @@
+import { formatDayjs } from '../../utils/helperFunc';
+
 const INITIAL_STATE = {
-  list: [{ title: 'May 2021', key: 'may', data: [] }],
+  timeline: [],
 };
 
 const appReducer = (state = INITIAL_STATE, action) => {
   console.log('action', action, state);
   switch (action.type) {
     case 'UPDATE_LIST':
-      const updatedData = state.list.map(item => {
-        console.log('item', item);
-        return item.key === action.payload.month
-          ? { ...item, data: [...item.data, action.payload] }
-          : item;
-      });
+      let updatedData = '';
+      const newObj = {
+        title: formatDayjs(action.payload?.date?.timestamp, 'MMM YYYY'),
+        key: action.payload?.date?.month,
+        data: [action.payload],
+      };
+
+      if (state.timeline.length) {
+        const myIndex = state.timeline.findIndex(
+          item => item.key === action.payload?.date?.month,
+        );
+        if (myIndex !== -1) {
+          updatedData = [
+            ...state.timeline.slice(0, myIndex),
+            newObj,
+            ...state.timeline.slice(myIndex + 1),
+          ];
+        }
+      } else {
+        updatedData = [...state.timeline, newObj];
+      }
 
       console.log('updatedData', updatedData);
 
-      return { state, list: updatedData };
+      return { state, timeline: updatedData };
     default:
       return state;
   }

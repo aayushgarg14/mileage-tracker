@@ -3,11 +3,12 @@ import { Icon } from 'react-native-elements';
 
 import { StyleConstants } from '../../utils/GenericStyles';
 
-const IconBasic = ({ name, fontSize, color, onPress, iconStyle }) => {
+const IconBasic = ({ name, fontSize, isBlue, color, onPress, iconStyle }) => {
   const type =
     (name === 'add' && 'material') ||
     (name === 'arrowBack' && 'material') ||
     (name === 'arrowDown' && 'material') ||
+    (name === 'calendar' && 'antdesign') ||
     (name === 'check' && 'material') ||
     (name === 'checked' && 'material') ||
     (name === 'currency' && 'material-community') ||
@@ -24,6 +25,7 @@ const IconBasic = ({ name, fontSize, color, onPress, iconStyle }) => {
     (name === 'add' && 'add') ||
     (name === 'arrowBack' && 'arrow-back') ||
     (name === 'arrowDown' && 'keyboard-arrow-down') ||
+    (name === 'calendar' && 'calendar') ||
     (name === 'check' && 'check') ||
     (name === 'checked' && 'radio-button-checked') ||
     (name === 'currency' && 'currency-inr') ||
@@ -41,7 +43,11 @@ const IconBasic = ({ name, fontSize, color, onPress, iconStyle }) => {
       name={iconName}
       type={type}
       size={fontSize || 14}
-      color={color || StyleConstants.color.$GREY}
+      color={
+        color ||
+        (isBlue && StyleConstants.color.$BLUE) ||
+        StyleConstants.color.$GREY
+      }
       style={iconStyle}
       onPress={onPress}
     />

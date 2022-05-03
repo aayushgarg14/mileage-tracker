@@ -1,41 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { CardBasic, Container } from '../../components';
 import { Form } from './components';
 import { GenericStyles } from '../../utils/GenericStyles';
 import { useForm } from 'react-hook-form';
 import IconBasic from '../../components/Icon';
-import { useDispatch, useSelector } from 'react-redux';
-import { updateListAction } from '../../store/app/action';
+import { useDispatch } from 'react-redux';
+import { updateTimelineAction } from '../../store/app/action';
+import { formatDayjs } from '../../utils/helperFunc';
 
 const AddEntryScreen = () => {
   const dispatch = useDispatch();
-  const list = useSelector(state => state.app.list);
   const {
     control,
     handleSubmit,
     getValues,
     setValue,
-    register,
     formState: { errors },
   } = useForm();
 
-  console.log('list', list);
+  const [isDatePickerVisible, setDatePickerVisible] = useState();
+  const [isTimePickerVisible, setTimePickerVisible] = useState();
 
   const submitHandler = data => {
     console.log(data);
     dispatch(
-      updateListAction({
+      updateTimelineAction({
         ...data,
         title: 'Refueling',
         displayCost: `Rs. ${data.cost}`,
         cost: parseInt(data.cost, 10),
-        day: 'Monday, 02',
-        date: '2021-05-02',
-        month: 'may',
-        id: new Date().getTime(),
+        odometer: parseInt(data.odometer, 10),
+        displayOdometer: `${data.odometer} km`,
+        displayDate: formatDayjs(data.date.date, 'dddd, DD'),
+        id: Date.now(),
       }),
     );
+  };
+
+  const toggleDatePickerHandler = () => {
+    setDatePickerVisible(prev => !prev);
+  };
+
+  const toggleTimePickerHandler = () => {
+    setTimePickerVisible(prev => !prev);
   };
 
   const renderMainChild = () => {
@@ -45,8 +53,11 @@ const AddEntryScreen = () => {
           control={control}
           values={getValues}
           setValue={setValue}
-          register={register}
           errors={errors}
+          isDatePickerVisible={isDatePickerVisible}
+          toggleDatePickerHandler={toggleDatePickerHandler}
+          isTimePickerVisible={isTimePickerVisible}
+          toggleTimePickerHandler={toggleTimePickerHandler}
         />
       </CardBasic>
     );

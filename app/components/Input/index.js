@@ -4,6 +4,7 @@ import { GenericStyles } from '../../utils/GenericStyles';
 import styles from './styles';
 
 const InputBasic = ({
+  focus,
   disabled,
   keyboardType,
   value,
@@ -11,6 +12,7 @@ const InputBasic = ({
   errorText,
   onBlurHandler,
   label,
+  clickInputHandler,
   updateInputHandler,
   containerStyle,
 }) => {
@@ -27,12 +29,12 @@ const InputBasic = ({
         <View
           style={[
             styles.labelContainer,
-            (isFocused || disabled) && styles.labelContainerFocused,
+            (focus || isFocused || disabled) && styles.labelContainerFocused,
           ]}>
           <Text
             style={[
               styles.label,
-              (isFocused || disabled) && styles.labelFocused,
+              (focus || isFocused || disabled) && styles.labelFocused,
               error && GenericStyles.redColor,
             ]}>
             {label}
@@ -47,6 +49,7 @@ const InputBasic = ({
           keyboardType={keyboardType}
           blurOnSubmit
           onChangeText={updateInputHandler}
+          onPressIn={clickInputHandler}
         />
       </View>
       {error && (

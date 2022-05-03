@@ -8,8 +8,8 @@ import { GenericStyles } from '../../utils/GenericStyles';
 import { ItemContainer, ItemHeader } from './components';
 
 const TimelineScreen = () => {
-  const list = useSelector(state => state.app.list);
-  console.log('list', list);
+  const timeline = useSelector(state => state.app.timeline);
+  console.log('timeline', timeline);
 
   const renderBottomChild = () => {
     return <FabBasic onPress={() => navigate('AddEntry')} />;
@@ -24,7 +24,7 @@ const TimelineScreen = () => {
   const renderMainChild = () => {
     return (
       <SectionList
-        sections={list}
+        sections={timeline}
         keyExtractor={(item, index) => item + index}
         renderItem={renderItem}
         renderSectionHeader={renderSectionHeader}

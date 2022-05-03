@@ -2,8 +2,9 @@ import React from 'react';
 import { View } from 'react-native';
 import { Controller } from 'react-hook-form';
 import { GenericStyles } from '../../../utils/GenericStyles';
-import { InputBasic } from '../../../components';
+import { InputBasic, PickerBasic } from '../../../components';
 import IconBasic from '../../../components/Icon';
+import { formatDate, formatTime } from '../../../utils/helperFunc';
 
 const inputRules = {
   required: {
@@ -16,7 +17,16 @@ const inputRules = {
   },
 };
 
-const Form = ({ control, values, setValue, errors }) => {
+const Form = ({
+  control,
+  values,
+  setValue,
+  errors,
+  isDatePickerVisible,
+  toggleDatePickerHandler,
+  isTimePickerVisible,
+  toggleTimePickerHandler,
+}) => {
   return (
     <View>
       <View style={GenericStyles.fdr}>
@@ -24,6 +34,7 @@ const Form = ({ control, values, setValue, errors }) => {
         <View style={[GenericStyles.fdr, GenericStyles.aic, GenericStyles.f1]}>
           <IconBasic
             name="speedometer"
+            isBlue
             iconStyle={GenericStyles.mr16}
             fontSize={20}
           />
@@ -47,7 +58,12 @@ const Form = ({ control, values, setValue, errors }) => {
 
       {/* GAS & GAS TYPE */}
       <View style={[GenericStyles.fdr, GenericStyles.aic, GenericStyles.mt16]}>
-        <IconBasic name="gas" iconStyle={GenericStyles.mr16} fontSize={20} />
+        <IconBasic
+          name="gas"
+          isBlue
+          iconStyle={GenericStyles.mr16}
+          fontSize={20}
+        />
         <View style={[GenericStyles.fdr, GenericStyles.f1, GenericStyles.jcs]}>
           {/* GAS */}
           <Controller
@@ -100,6 +116,7 @@ const Form = ({ control, values, setValue, errors }) => {
       <View style={[GenericStyles.fdr, GenericStyles.aic, GenericStyles.mt16]}>
         <IconBasic
           name="currency"
+          isBlue
           iconStyle={GenericStyles.mr16}
           fontSize={20}
         />
@@ -145,6 +162,78 @@ const Form = ({ control, values, setValue, errors }) => {
               />
             )}
             rules={inputRules}
+          />
+        </View>
+      </View>
+
+      {/* calendar */}
+      <View style={[GenericStyles.fdr, GenericStyles.aic, GenericStyles.mt16]}>
+        <IconBasic
+          name="calendar"
+          iconStyle={GenericStyles.mr16}
+          isBlue
+          fontSize={20}
+        />
+        <View style={[GenericStyles.fdr, GenericStyles.f1, GenericStyles.jcs]}>
+          {/* PRICE/L */}
+          <Controller
+            name="date"
+            control={control}
+            defaultValue={{
+              timestamp: Date.now(),
+              date: formatDate(Date.now()),
+              month: new Date().getMonth(),
+            }}
+            render={({ field: { onChange, onBlur, value } }) => (
+              <>
+                <InputBasic
+                  label="Date"
+                  focus={true}
+                  disabled={true}
+                  value={value?.date || formatDate(Date.now())}
+                  error={errors?.price}
+                  errorText={errors?.price?.message}
+                  onBlur={onBlur}
+                  clickInputHandler={toggleDatePickerHandler}
+                />
+                <PickerBasic
+                  isPickerVisible={isDatePickerVisible}
+                  hideDatePickerHandler={toggleDatePickerHandler}
+                  confirmPickerHandler={onChange}
+                />
+              </>
+            )}
+          />
+
+          {/* TOTAL COST */}
+          <Controller
+            name="time"
+            control={control}
+            defaultValue={{
+              timestamp: Date.now(),
+              time: formatTime(Date.now()),
+            }}
+            render={({ field: { onChange, onBlur, value } }) => (
+              <>
+                <InputBasic
+                  containerStyle={GenericStyles.ml16}
+                  label="Time"
+                  focus={true}
+                  disabled={true}
+                  value={value?.time || formatTime(Date.now())}
+                  error={errors?.price}
+                  errorText={errors?.price?.message}
+                  onBlur={onBlur}
+                  clickInputHandler={toggleTimePickerHandler}
+                />
+                <PickerBasic
+                  mode="time"
+                  isPickerVisible={isTimePickerVisible}
+                  hideDatePickerHandler={toggleTimePickerHandler}
+                  confirmPickerHandler={onChange}
+                />
+              </>
+            )}
           />
         </View>
       </View>
