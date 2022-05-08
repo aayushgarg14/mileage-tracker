@@ -13,6 +13,7 @@ const IconBasic = ({ name, fontSize, isBlue, color, onPress, iconStyle }) => {
     (name === 'checked' && 'material') ||
     (name === 'currency' && 'material-community') ||
     (name === 'dot' && 'material') ||
+    (name === 'empty' && 'material') ||
     (name === 'gas' && 'material') ||
     (name === 'home' && 'antdesign') ||
     (name === 'unchecked' && 'material') ||
@@ -30,6 +31,7 @@ const IconBasic = ({ name, fontSize, isBlue, color, onPress, iconStyle }) => {
     (name === 'checked' && 'radio-button-checked') ||
     (name === 'currency' && 'currency-inr') ||
     (name === 'dot' && 'stop-circle') ||
+    (name === 'empty' && 'hourglass-empty') ||
     (name === 'gas' && 'local-gas-station') ||
     (name === 'home' && 'home') ||
     (name === 'unchecked' && 'radio-button-unchecked') ||

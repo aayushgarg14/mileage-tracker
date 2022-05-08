@@ -1,50 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { CardBasic, Container } from '../../components';
-import { Form } from './components';
+import Form from './Form';
+import { CardBasic, Container, IconBasic } from '../../components';
 import { GenericStyles } from '../../utils/GenericStyles';
-import { useForm } from 'react-hook-form';
-import IconBasic from '../../components/Icon';
-import { useDispatch } from 'react-redux';
-import { updateTimelineAction } from '../../store/app/action';
-import { formatDayjs } from '../../utils/helperFunc';
+import useEntry from './useEntry';
 
 const AddEntryScreen = () => {
-  const dispatch = useDispatch();
   const {
-    control,
-    handleSubmit,
-    getValues,
-    setValue,
-    formState: { errors },
-  } = useForm();
-
-  const [isDatePickerVisible, setDatePickerVisible] = useState();
-  const [isTimePickerVisible, setTimePickerVisible] = useState();
-
-  const submitHandler = data => {
-    console.log(data);
-    dispatch(
-      updateTimelineAction({
-        ...data,
-        title: 'Refueling',
-        displayCost: `Rs. ${data.cost}`,
-        cost: parseInt(data.cost, 10),
-        odometer: parseInt(data.odometer, 10),
-        displayOdometer: `${data.odometer} km`,
-        displayDate: formatDayjs(data.date.date, 'dddd, DD'),
-        id: Date.now(),
-      }),
-    );
-  };
-
-  const toggleDatePickerHandler = () => {
-    setDatePickerVisible(prev => !prev);
-  };
-
-  const toggleTimePickerHandler = () => {
-    setTimePickerVisible(prev => !prev);
-  };
+    formData: { control, handleSubmit, getValues, setValue, errors },
+    isDatePickerVisible,
+    isTimePickerVisible,
+    submitHandler,
+    toggleDatePickerHandler,
+    toggleTimePickerHandler,
+  } = useEntry();
 
   const renderMainChild = () => {
     return (

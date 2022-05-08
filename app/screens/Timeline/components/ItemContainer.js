@@ -1,30 +1,20 @@
 import React from 'react';
 import { View } from 'react-native';
-import IconBasic from '../../../components/Icon';
-import TextBasic from '../../../components/Text';
+
+import { IconBasic, TextBasic } from '../../../components';
 import { CircleStyles, GenericStyles } from '../../../utils/GenericStyles';
+import styles from './styles';
 
 const ItemContainer = ({ data }) => {
   const Item = ({ item }) => (
-    <View
-      style={[
-        GenericStyles.fdr,
-        GenericStyles.jcs,
-        GenericStyles.blueBorderColor,
-        {
-          flex: 1,
-          borderLeftWidth: 2,
-          paddingLeft: 20,
-          marginLeft: 20,
-        },
-      ]}>
+    <View style={styles.item}>
       <View style={GenericStyles.ml16}>
         <TextBasic text={item.title} />
         <View style={GenericStyles.mt4}>
           <TextBasic text={item.displayDate} isSmall isLight />
         </View>
-        <View style={[GenericStyles.fdr, GenericStyles.aic, GenericStyles.mt4]}>
-          <IconBasic name="speedometer" />
+        <View style={[GenericStyles.fdr, GenericStyles.aic, GenericStyles.mt8]}>
+          <IconBasic name="speedometer" color="#FFF" />
           <View style={GenericStyles.ml4}>
             <TextBasic text={item.displayOdometer} isSmall isLight />
           </View>
@@ -35,12 +25,8 @@ const ItemContainer = ({ data }) => {
   );
 
   return (
-    <View style={{ flexDirection: 'row', flex: 1, height: 100 }}>
-      <View
-        style={{
-          position: 'absolute',
-          zIndex: 1,
-        }}>
+    <View style={styles.itemContainer}>
+      <View style={styles.dotContainer}>
         <View
           style={[
             CircleStyles(40).circle,

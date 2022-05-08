@@ -1,16 +1,16 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import AddEntryScreen from '../screens/Entry';
 import HomeScreen from '../screens/Home';
 import TimelineScreen from '../screens/Timeline';
 import { navigationRef } from './RootNavigation';
-import AddEntryScreen from '../screens/Entry';
-import IconBasic from '../components/Icon';
+import { IconBasic } from '../components';
 import { StyleConstants } from '../utils/GenericStyles';
-import { Platform } from 'react-native';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();

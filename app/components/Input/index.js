@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, Text } from 'react-native';
 import { GenericStyles } from '../../utils/GenericStyles';
+import TextBasic from '../Text/Basic';
 import styles from './styles';
 
 const InputBasic = ({
@@ -8,6 +9,7 @@ const InputBasic = ({
   disabled,
   keyboardType,
   value,
+  bottomText,
   error,
   errorText,
   onBlurHandler,
@@ -19,8 +21,6 @@ const InputBasic = ({
   const [isFocused, setIsFocused] = useState(false);
 
   const handleFocus = () => setIsFocused(true);
-
-  console.log('error', error, 'errortext', errorText);
 
   return (
     <View style={[GenericStyles.f1, containerStyle]}>
@@ -52,6 +52,11 @@ const InputBasic = ({
           onPressIn={clickInputHandler}
         />
       </View>
+      {bottomText && (
+        <View style={[GenericStyles.mt4, GenericStyles.ml4]}>
+          <TextBasic text={bottomText} isSmall isLight />
+        </View>
+      )}
       {error && (
         <View style={[GenericStyles.mt4, GenericStyles.ml4]}>
           <Text style={[GenericStyles.redColor, GenericStyles.fontS]}>

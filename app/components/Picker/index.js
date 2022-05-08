@@ -9,14 +9,15 @@ const PickerBasic = ({
   hideDatePickerHandler,
 }) => {
   const handleConfirm = date => {
+    const dateObj = new Date(date);
     hideDatePickerHandler();
     confirmPickerHandler(
       mode === 'time'
-        ? { timestamp: new Date(date).getTime(), time: formatTime(date) }
+        ? { timestamp: dateObj.getTime(), time: formatTime(date) }
         : {
-            timestamp: Date.now(),
+            timestamp: dateObj.getTime(),
             date: formatDate(date),
-            month: new Date(date).getMonth(),
+            month: dateObj.getMonth(),
           },
     );
   };

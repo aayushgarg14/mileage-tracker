@@ -15,7 +15,9 @@ const TimelineScreen = () => {
     return <FabBasic onPress={() => navigate('AddEntry')} />;
   };
 
-  const renderItem = ({ item }) => <ItemContainer data={item} />;
+  const renderItem = ({ item, index }) => {
+    return <ItemContainer data={item} />;
+  };
 
   const renderSectionHeader = ({ section: { title } }) => (
     <ItemHeader title={title} />
@@ -25,7 +27,8 @@ const TimelineScreen = () => {
     return (
       <SectionList
         sections={timeline}
-        keyExtractor={(item, index) => item + index}
+        showsVerticalScrollIndicator={false}
+        keyExtractor={item => item.id}
         renderItem={renderItem}
         renderSectionHeader={renderSectionHeader}
       />

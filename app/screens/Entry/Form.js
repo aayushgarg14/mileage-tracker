@@ -1,21 +1,12 @@
 import React from 'react';
 import { View } from 'react-native';
+import { useSelector } from 'react-redux';
 import { Controller } from 'react-hook-form';
-import { GenericStyles } from '../../../utils/GenericStyles';
-import { InputBasic, PickerBasic } from '../../../components';
-import IconBasic from '../../../components/Icon';
-import { formatDate, formatTime } from '../../../utils/helperFunc';
 
-const inputRules = {
-  required: {
-    value: true,
-    message: 'Enter a number',
-  },
-  pattern: {
-    value: /^\d+(\.\d+)?$/,
-    message: 'Not a valid number',
-  },
-};
+import { GenericStyles } from '../../utils/GenericStyles';
+import { IconBasic, InputBasic, PickerBasic } from '../../components';
+import { formatDate, formatTime } from '../../utils/helperFunc';
+import { inputRules } from '../../utils/data';
 
 const Form = ({
   control,
@@ -27,6 +18,8 @@ const Form = ({
   isTimePickerVisible,
   toggleTimePickerHandler,
 }) => {
+  const timeline = useSelector(state => state.app.timeline);
+
   return (
     <View>
       <View style={GenericStyles.fdr}>
@@ -47,11 +40,19 @@ const Form = ({
                 value={value}
                 error={errors?.odometer}
                 errorText={errors?.odometer?.message}
+                // bottomText={`Last value: ${
+                //   timeline?.[0]?.displayLastOdometer || 0
+                // }`}
                 onBlur={onBlur}
                 updateInputHandler={onChange}
               />
             )}
-            rules={inputRules}
+            rules={{
+              ...inputRules,
+              validate: value =>
+                value > (timeline?.[0]?.lastOdometer || 0) ||
+                'It should be greater than last value',
+            }}
           />
         </View>
       </View>
@@ -74,7 +75,7 @@ const Form = ({
               const onChangeHandler = v => {
                 const price = values('price');
                 if (price) {
-                  setValue('cost', (v * price).toString());
+                  setValue('cost', (v * price).toFixed(2).toString());
                 }
 
                 onChange(v);
@@ -129,7 +130,7 @@ const Form = ({
               const onChangeHandler = v => {
                 const gas = values('gas');
                 if (gas) {
-                  setValue('cost', (v * gas).toString());
+                  setValue('cost', (v * gas).toFixed(2).toString());
                 }
 
                 onChange(v);
@@ -166,7 +167,7 @@ const Form = ({
         </View>
       </View>
 
-      {/* calendar */}
+      {/* CALENDAR */}
       <View style={[GenericStyles.fdr, GenericStyles.aic, GenericStyles.mt16]}>
         <IconBasic
           name="calendar"
@@ -175,7 +176,7 @@ const Form = ({
           fontSize={20}
         />
         <View style={[GenericStyles.fdr, GenericStyles.f1, GenericStyles.jcs]}>
-          {/* PRICE/L */}
+          {/* DATE */}
           <Controller
             name="date"
             control={control}
@@ -205,7 +206,7 @@ const Form = ({
             )}
           />
 
-          {/* TOTAL COST */}
+          {/* TIME */}
           <Controller
             name="time"
             control={control}

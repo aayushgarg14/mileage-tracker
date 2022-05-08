@@ -6,6 +6,7 @@ const StyleConstants = {
     $DARK_GREY: '#565656',
     $GREY: '#676D70',
     $DARK: '#202124',
+    $GREEN: '#5BC558',
     $RED: '#E94638',
     $BLUE: '#8AB4F8',
   },
@@ -27,12 +28,15 @@ const StyleConstants = {
 const GenericStyles = StyleSheet.create({
   bold: { fontWeight: '700' },
   mt4: { marginTop: 4 },
+  mt8: { marginTop: 8 },
   mt16: { marginTop: 16 },
   mb4: { marginBottom: 4 },
+  mb8: { marginBottom: 8 },
   mb16: { marginBottom: 16 },
   ml4: { marginLeft: 4 },
   ml16: { marginLeft: 16 },
   mr4: { marginRight: 4 },
+  mr8: { marginRight: 8 },
   mr16: { marginRight: 16 },
   phMain: { paddingHorizontal: 16 },
 

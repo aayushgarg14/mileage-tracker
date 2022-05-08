@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar, View } from 'react-native';
 
-import TextBasic from '../Text';
+import TextBasic from '../Text/Basic';
 
 import styles from './styles';
 import { GenericStyles, StyleConstants } from '../../utils/GenericStyles';

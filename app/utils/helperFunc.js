@@ -1,7 +1,14 @@
 import dayjs from 'dayjs';
 
+var relativeTime = require('dayjs/plugin/relativeTime');
+dayjs.extend(relativeTime);
+
 const formatDayjs = (date, format) =>
   dayjs(date).format(format || 'DD MMM YYYY');
+
+const fromNowDayjs = date => dayjs(date).fromNow();
+
+const getLastMonthDate = () => dayjs().subtract(1, 'month').format('MM YYYY');
 
 const formatDate = date => {
   var d = new Date(date),
@@ -28,4 +35,4 @@ const formatTime = date => {
   });
 };
 
-export { formatDayjs, formatDate, formatTime };
+export { formatDayjs, fromNowDayjs, formatDate, formatTime, getLastMonthDate };
