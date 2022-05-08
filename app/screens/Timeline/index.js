@@ -9,7 +9,6 @@ import { ItemContainer, ItemHeader } from './components';
 
 const TimelineScreen = () => {
   const timeline = useSelector(state => state.app.timeline);
-  console.log('timeline', timeline);
 
   const renderBottomChild = () => (
     <FabBasic onPress={() => navigate('AddEntry')} />
@@ -17,7 +16,7 @@ const TimelineScreen = () => {
 
   const renderEmpty = () => <EmptyBasic />;
 
-  const renderItem = ({ item, index }) => {
+  const renderItem = ({ item }) => {
     return <ItemContainer data={item} />;
   };
 

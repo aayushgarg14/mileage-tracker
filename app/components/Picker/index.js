@@ -1,5 +1,6 @@
 import React from 'react';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
+import { useSelector } from 'react-redux';
 import { formatDate, getMonth, getTimestamp } from '../../utils/helperFunc';
 
 const PickerBasic = ({
@@ -8,11 +9,13 @@ const PickerBasic = ({
   confirmPickerHandler,
   hideDatePickerHandler,
 }) => {
+  const timeline = useSelector(state => state.app.timeline);
+
   const handleConfirm = date => {
     hideDatePickerHandler();
     confirmPickerHandler(
       mode === 'time'
-        ? { timestamp: getTimestamp(date), time: formatDate('now', 'hh:mm a') }
+        ? { timestamp: getTimestamp(date), time: formatDate(date, 'hh:mm a') }
         : {
             timestamp: getTimestamp(date),
             date: formatDate(date, 'YYYY-MM-DD'),
@@ -27,6 +30,11 @@ const PickerBasic = ({
       mode={mode || 'date'}
       onConfirm={handleConfirm}
       onCancel={hideDatePickerHandler}
+      minimumDate={
+        timeline?.[0]?.lastUpdateDate
+          ? new Date(timeline[0].lastUpdateDate)
+          : null
+      }
       maximumDate={new Date()}
     />
   );

@@ -18,6 +18,7 @@ const IconBasic = ({ name, fontSize, isBlue, color, onPress, iconStyle }) => {
     (name === 'home' && 'antdesign') ||
     (name === 'unchecked' && 'material') ||
     (name === 'opacity' && 'material') ||
+    (name === 'other' && 'material-community') ||
     (name === 'speedometer' && 'material-community') ||
     (name === 'timeline' && 'material') ||
     (name === 'trend' && 'material');
@@ -36,6 +37,7 @@ const IconBasic = ({ name, fontSize, isBlue, color, onPress, iconStyle }) => {
     (name === 'home' && 'home') ||
     (name === 'unchecked' && 'radio-button-unchecked') ||
     (name === 'opacity' && 'opacity') ||
+    (name === 'other' && 'cash-100') ||
     (name === 'speedometer' && 'speedometer') ||
     (name === 'timeline' && 'timeline') ||
     (name === 'trend' && 'trending-up');

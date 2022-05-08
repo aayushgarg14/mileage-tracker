@@ -36,13 +36,14 @@ const Container = ({
       <View style={styles.headerContainer}>
         <View style={[GenericStyles.fdr, GenericStyles.aic]}>
           {isBackBtn ? (
-            <IconBasic
-              name="arrowBack"
-              color="#FFF"
-              fontSize={20}
-              iconStyle={GenericStyles.mr16}
-              onPress={goBack}
-            />
+            <View style={GenericStyles.mr16}>
+              <IconBasic
+                name="arrowBack"
+                color="#FFF"
+                fontSize={20}
+                onPress={goBack}
+              />
+            </View>
           ) : null}
           <TextBasic text={text} isBold isLarge />
         </View>

@@ -217,31 +217,33 @@ const Form = ({
             control={control}
             defaultValue={{
               timestamp: Date.now(),
-              time: formatDate('now', 'hh:mm a'),
+              time: formatDate('now', 'hh:mm A'),
             }}
-            render={({ field: { onChange, value } }) => (
-              <>
-                <Pressable
-                  style={[GenericStyles.f1, GenericStyles.fdr]}
-                  onPress={toggleTimePickerHandler}>
-                  <InputBasic
-                    containerStyle={GenericStyles.ml16}
-                    label="Time"
-                    focus={true}
-                    disabled={true}
-                    value={value?.time || formatDate('now', 'hh:mm A')}
-                    error={errors?.time}
-                    errorText={errors?.time?.message}
+            render={({ field: { onChange, value } }) => {
+              return (
+                <>
+                  <Pressable
+                    style={[GenericStyles.f1, GenericStyles.fdr]}
+                    onPress={toggleTimePickerHandler}>
+                    <InputBasic
+                      containerStyle={GenericStyles.ml16}
+                      label="Time"
+                      focus={true}
+                      disabled={true}
+                      value={value?.time || formatDate('now', 'hh:mm A')}
+                      error={errors?.time}
+                      errorText={errors?.time?.message}
+                    />
+                  </Pressable>
+                  <PickerBasic
+                    mode="time"
+                    isPickerVisible={isTimePickerVisible}
+                    hideDatePickerHandler={toggleTimePickerHandler}
+                    confirmPickerHandler={onChange}
                   />
-                </Pressable>
-                <PickerBasic
-                  mode="time"
-                  isPickerVisible={isTimePickerVisible}
-                  hideDatePickerHandler={toggleTimePickerHandler}
-                  confirmPickerHandler={onChange}
-                />
-              </>
-            )}
+                </>
+              );
+            }}
           />
         </View>
       </View>

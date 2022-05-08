@@ -4,7 +4,11 @@ import { StyleConstants } from '../../utils/GenericStyles';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateHomeAction, updateTimelineAction } from '../../store/app/action';
-import { formatDate, getDateFromNow } from '../../utils/helperFunc';
+import {
+  formatDate,
+  getDateFromNow,
+  getTimestamp,
+} from '../../utils/helperFunc';
 import { goBack } from '../../navigation/RootNavigation';
 
 const useEntry = () => {
@@ -47,7 +51,7 @@ const useEntry = () => {
               ? {
                   ...each,
                   value: avgCons,
-                  displayValue: avgCons.toString(),
+                  displayValue: avgCons.toFixed(2),
                   iconColor:
                     avgCons > each.value
                       ? StyleConstants.color.$GREEN
@@ -58,17 +62,23 @@ const useEntry = () => {
                   ...each,
                   value: each.value ? (each.value + avgCons) / 2 : avgCons,
                   displayValue: each.value
-                    ? (each.value + avgCons) / 2
-                    : avgCons.toString(),
+                    ? ((each.value + avgCons) / 2).toFixed(2)
+                    : avgCons.toFixed(2),
                 }
               : each.type === 'lastUpdate'
               ? {
                   ...each,
                   lastUpdateDate: inputData.date.date,
+                  lastUpdateTimestamp: inputData.time.timestamp,
                   name: `${formatDate(
                     inputData.date.date,
-                    'YYYY-DD-MM',
-                  )}•${getDateFromNow(inputData.date.date)}`,
+                    'YYYY-MM-DD',
+                  )} • ${getDateFromNow(
+                    formatDate(inputData.date.date, 'DD MM YYYY') ===
+                      formatDate(Date.now(), 'DD MM YYYY')
+                      ? inputData.time.timestamp
+                      : inputData.date.date,
+                  )}`,
                 }
               : each,
           ),
@@ -77,6 +87,7 @@ const useEntry = () => {
           ...home.entries,
           data: [
             {
+              id: getTimestamp(),
               icon: 'gas',
               iconColor: StyleConstants.color.$BLUE,
               heading: formatDate(inputData.date.date, 'DD MMMM YYYY'),
