@@ -3,7 +3,15 @@ import { Icon } from 'react-native-elements';
 
 import { StyleConstants } from '../../utils/GenericStyles';
 
-const IconBasic = ({ name, fontSize, isBlue, color, onPress, iconStyle }) => {
+const IconBasic = ({
+  name,
+  fontSize,
+  isBlue,
+  color,
+  onPress,
+  iconStyle,
+  ...props
+}) => {
   const type =
     (name === 'add' && 'material') ||
     (name === 'arrowBack' && 'material') ||
@@ -16,12 +24,13 @@ const IconBasic = ({ name, fontSize, isBlue, color, onPress, iconStyle }) => {
     (name === 'empty' && 'material') ||
     (name === 'gas' && 'material') ||
     (name === 'home' && 'antdesign') ||
-    (name === 'unchecked' && 'material') ||
+    (name === 'menu' && 'material') ||
     (name === 'opacity' && 'material') ||
     (name === 'other' && 'material-community') ||
     (name === 'speedometer' && 'material-community') ||
     (name === 'timeline' && 'material') ||
-    (name === 'trend' && 'material');
+    (name === 'trend' && 'material') ||
+    (name === 'unchecked' && 'material');
 
   const iconName =
     (name === 'add' && 'add') ||
@@ -35,12 +44,13 @@ const IconBasic = ({ name, fontSize, isBlue, color, onPress, iconStyle }) => {
     (name === 'empty' && 'hourglass-empty') ||
     (name === 'gas' && 'local-gas-station') ||
     (name === 'home' && 'home') ||
-    (name === 'unchecked' && 'radio-button-unchecked') ||
+    (name === 'menu' && 'menu') ||
     (name === 'opacity' && 'opacity') ||
     (name === 'other' && 'cash-100') ||
     (name === 'speedometer' && 'speedometer') ||
     (name === 'timeline' && 'timeline') ||
-    (name === 'trend' && 'trending-up');
+    (name === 'trend' && 'trending-up') ||
+    (name === 'unchecked' && 'radio-button-unchecked');
 
   return (
     <Icon
@@ -54,6 +64,7 @@ const IconBasic = ({ name, fontSize, isBlue, color, onPress, iconStyle }) => {
       }
       style={iconStyle}
       onPress={onPress}
+      {...props}
     />
   );
 };

@@ -39,6 +39,7 @@ const AddEntryScreen = () => {
         color="#FFF"
         fontSize={20}
         onPress={handleSubmit(submitHandler)}
+        testID="AddEntry.Button"
       />
     );
   };

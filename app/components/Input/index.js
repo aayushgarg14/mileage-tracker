@@ -12,12 +12,14 @@ const InputBasic = ({
   bottomText,
   error,
   errorText,
+  errorTestID,
   onBlurHandler,
   label,
   pointerEvents,
   clickInputHandler,
   updateInputHandler,
   containerStyle,
+  ...props
 }) => {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -52,6 +54,7 @@ const InputBasic = ({
           pointerEvents={pointerEvents || 'auto'}
           onChangeText={updateInputHandler}
           onPressIn={clickInputHandler}
+          {...props}
         />
       </View>
       {bottomText && (
@@ -61,7 +64,9 @@ const InputBasic = ({
       )}
       {error && (
         <View style={[GenericStyles.mt4, GenericStyles.ml4]}>
-          <Text style={[GenericStyles.redColor, GenericStyles.fontS]}>
+          <Text
+            testID={errorTestID}
+            style={[GenericStyles.redColor, GenericStyles.fontS]}>
             {errorText}
           </Text>
         </View>

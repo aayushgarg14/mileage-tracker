@@ -46,6 +46,8 @@ const Form = ({
                 }`}
                 onBlur={onBlur}
                 updateInputHandler={onChange}
+                testID="Odometer.Input"
+                errorTestID="Odometer.ErrorText"
               />
             )}
             rules={{

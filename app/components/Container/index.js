@@ -44,7 +44,9 @@ const Container = ({
                 onPress={goBack}
               />
             </View>
-          ) : null}
+          ) : (
+            <IconBasic name="menu" color="#FFF" fontSize={20} />
+          )}
           <TextBasic text={text} isBold isLarge />
         </View>
         {rightHeaderChild}

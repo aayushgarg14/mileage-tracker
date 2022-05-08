@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		15B8A7A628282E0B00D10B3B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B8A7A528282E0B00D10B3B /* File.swift */; };
 		26AC658187E61725B959B8D0 /* libPods-MileageTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E6D482DBF626867D83C0E5 /* libPods-MileageTracker.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A28A30A8C195993E32C2AC95 /* libPods-MileageTracker-MileageTrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A6EA8F102D99F3FE2A22EA /* libPods-MileageTracker-MileageTrackerTests.a */; };
@@ -36,6 +37,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MileageTracker/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MileageTracker/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MileageTracker/main.m; sourceTree = "<group>"; };
+		15B8A7A528282E0B00D10B3B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		1ED265A616F64AF33A109B02 /* Pods-MileageTracker-MileageTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MileageTracker-MileageTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-MileageTracker-MileageTrackerTests/Pods-MileageTracker-MileageTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		28631871B1856CFDCB88013B /* Pods-MileageTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MileageTracker.release.xcconfig"; path = "Target Support Files/Pods-MileageTracker/Pods-MileageTracker.release.xcconfig"; sourceTree = "<group>"; };
 		40E6D482DBF626867D83C0E5 /* libPods-MileageTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MileageTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				15B8A7A528282E0B00D10B3B /* File.swift */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
@@ -114,7 +117,6 @@
 				9419B93F7693D93FAC445BA5 /* Pods-MileageTracker-MileageTrackerTests.debug.xcconfig */,
 				1ED265A616F64AF33A109B02 /* Pods-MileageTracker-MileageTrackerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +210,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -412,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				15B8A7A628282E0B00D10B3B /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +434,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9419B93F7693D93FAC445BA5 /* Pods-MileageTracker-MileageTrackerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1ED265A616F64AF33A109B02 /* Pods-MileageTracker-MileageTrackerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = MileageTrackerTests/Info.plist;
