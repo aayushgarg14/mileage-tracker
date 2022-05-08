@@ -3,7 +3,7 @@ import { SectionList } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import { navigate } from '../../navigation/RootNavigation';
-import { Container, FabBasic } from '../../components';
+import { Container, EmptyBasic, FabBasic } from '../../components';
 import { GenericStyles } from '../../utils/GenericStyles';
 import { ItemContainer, ItemHeader } from './components';
 
@@ -11,9 +11,11 @@ const TimelineScreen = () => {
   const timeline = useSelector(state => state.app.timeline);
   console.log('timeline', timeline);
 
-  const renderBottomChild = () => {
-    return <FabBasic onPress={() => navigate('AddEntry')} />;
-  };
+  const renderBottomChild = () => (
+    <FabBasic onPress={() => navigate('AddEntry')} />
+  );
+
+  const renderEmpty = () => <EmptyBasic />;
 
   const renderItem = ({ item, index }) => {
     return <ItemContainer data={item} />;
@@ -23,17 +25,16 @@ const TimelineScreen = () => {
     <ItemHeader title={title} />
   );
 
-  const renderMainChild = () => {
-    return (
-      <SectionList
-        sections={timeline}
-        showsVerticalScrollIndicator={false}
-        keyExtractor={item => item.id}
-        renderItem={renderItem}
-        renderSectionHeader={renderSectionHeader}
-      />
-    );
-  };
+  const renderMainChild = () => (
+    <SectionList
+      sections={timeline}
+      showsVerticalScrollIndicator={false}
+      keyExtractor={item => item.id}
+      renderItem={renderItem}
+      renderSectionHeader={renderSectionHeader}
+      ListEmptyComponent={renderEmpty}
+    />
+  );
 
   return (
     <Container

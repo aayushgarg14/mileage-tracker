@@ -1,11 +1,11 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Pressable, View } from 'react-native';
 import { useSelector } from 'react-redux';
 import { Controller } from 'react-hook-form';
 
 import { GenericStyles } from '../../utils/GenericStyles';
 import { IconBasic, InputBasic, PickerBasic } from '../../components';
-import { formatDate, formatTime } from '../../utils/helperFunc';
+import { formatDate, getMonth } from '../../utils/helperFunc';
 import { inputRules } from '../../utils/data';
 
 const Form = ({
@@ -37,12 +37,13 @@ const Form = ({
             render={({ field: { onChange, onBlur, value } }) => (
               <InputBasic
                 label="Odometer (km)"
+                keyboardType="numeric"
                 value={value}
                 error={errors?.odometer}
                 errorText={errors?.odometer?.message}
-                // bottomText={`Last value: ${
-                //   timeline?.[0]?.displayLastOdometer || 0
-                // }`}
+                bottomText={`Last value: ${
+                  timeline?.[0]?.displayLastOdometer || 0
+                }`}
                 onBlur={onBlur}
                 updateInputHandler={onChange}
               />
@@ -139,6 +140,7 @@ const Form = ({
               return (
                 <InputBasic
                   label="Price/L"
+                  keyboardType="numeric"
                   value={value}
                   error={errors?.price}
                   errorText={errors?.price?.message}
@@ -182,21 +184,24 @@ const Form = ({
             control={control}
             defaultValue={{
               timestamp: Date.now(),
-              date: formatDate(Date.now()),
-              month: new Date().getMonth(),
+              date: formatDate('now', 'YYYY-MM-DD'),
+              month: getMonth(),
             }}
-            render={({ field: { onChange, onBlur, value } }) => (
+            render={({ field: { onChange, value } }) => (
               <>
-                <InputBasic
-                  label="Date"
-                  focus={true}
-                  disabled={true}
-                  value={value?.date || formatDate(Date.now())}
-                  error={errors?.price}
-                  errorText={errors?.price?.message}
-                  onBlur={onBlur}
-                  clickInputHandler={toggleDatePickerHandler}
-                />
+                <Pressable
+                  style={[GenericStyles.f1, GenericStyles.fdr]}
+                  onPress={toggleDatePickerHandler}>
+                  <InputBasic
+                    label="Date"
+                    focus={true}
+                    disabled={true}
+                    pointerEvents="none"
+                    value={value?.date || formatDate('now', 'YYYY-MM-DD')}
+                    error={errors?.date}
+                    errorText={errors?.date?.message}
+                  />
+                </Pressable>
                 <PickerBasic
                   isPickerVisible={isDatePickerVisible}
                   hideDatePickerHandler={toggleDatePickerHandler}
@@ -212,21 +217,23 @@ const Form = ({
             control={control}
             defaultValue={{
               timestamp: Date.now(),
-              time: formatTime(Date.now()),
+              time: formatDate('now', 'hh:mm a'),
             }}
-            render={({ field: { onChange, onBlur, value } }) => (
+            render={({ field: { onChange, value } }) => (
               <>
-                <InputBasic
-                  containerStyle={GenericStyles.ml16}
-                  label="Time"
-                  focus={true}
-                  disabled={true}
-                  value={value?.time || formatTime(Date.now())}
-                  error={errors?.price}
-                  errorText={errors?.price?.message}
-                  onBlur={onBlur}
-                  clickInputHandler={toggleTimePickerHandler}
-                />
+                <Pressable
+                  style={[GenericStyles.f1, GenericStyles.fdr]}
+                  onPress={toggleTimePickerHandler}>
+                  <InputBasic
+                    containerStyle={GenericStyles.ml16}
+                    label="Time"
+                    focus={true}
+                    disabled={true}
+                    value={value?.time || formatDate('now', 'hh:mm A')}
+                    error={errors?.time}
+                    errorText={errors?.time?.message}
+                  />
+                </Pressable>
                 <PickerBasic
                   mode="time"
                   isPickerVisible={isTimePickerVisible}

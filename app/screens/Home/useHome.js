@@ -1,39 +1,32 @@
-import { useFocusEffect } from '@react-navigation/native';
-import { useCallback } from 'react';
+import { useIsFocused } from '@react-navigation/native';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateHomeAction } from '../../store/actions';
-import { formatDayjs, getLastMonthDate } from '../../utils/helperFunc';
+import { formatDate, getLastMonthDate } from '../../utils/helperFunc';
 
 const useHome = () => {
+  const isFocused = useIsFocused();
+
   const dispatch = useDispatch();
   const home = useSelector(state => state.app.home);
   const timeline = useSelector(state => state.app.timeline);
 
-  useFocusEffect(
-    useCallback(() => {
+  useEffect(() => {
+    if (isFocused) {
       if (!timeline.length) {
         return;
       }
 
-      console.log(
-        formatDayjs(timeline[0].lastUpdateDate, 'MM YYYY'),
-        formatDayjs(Date.now(), 'MM YYYY'),
-        formatDayjs(timeline[0].lastUpdateDate, 'MM YYYY') ===
-          formatDayjs(Date.now(), 'MM YYYY'),
-        getLastMonthDate(),
-      );
-
       let cost = { curr: 0.0, prev: 0.0 };
 
       if (
-        formatDayjs(timeline[0].lastUpdateDate, 'MM YYYY') ===
-        formatDayjs(Date.now(), 'MM YYYY')
+        formatDate(timeline[0].lastUpdateDate, 'MM YYYY') ===
+        formatDate(Date.now(), 'MM YYYY')
       ) {
         cost.prev = 0.0;
         cost.curr = timeline[0].totalCost;
       } else if (
-        formatDayjs(timeline[0].lastUpdateDate, 'MM YYYY') ===
-        getLastMonthDate()
+        formatDate(timeline[0].lastUpdateDate, 'MM YYYY') === getLastMonthDate()
       ) {
         cost.prev = timeline[0].totalCost;
         cost.curr = 0.0;
@@ -41,8 +34,7 @@ const useHome = () => {
 
       if (
         timeline[1]?.lastUpdateDate &&
-        formatDayjs(timeline[1].lastUpdateDate, 'MM YYYY') ===
-          getLastMonthDate()
+        formatDate(timeline[1].lastUpdateDate, 'MM YYYY') === getLastMonthDate()
       ) {
         cost.prev = timeline[1].totalCost;
       }
@@ -83,8 +75,8 @@ const useHome = () => {
           },
         }),
       );
-    }, [dispatch, home.gas, timeline]),
-  );
+    }
+  }, [dispatch, home.gas, timeline, isFocused]);
 
   return { home };
 };

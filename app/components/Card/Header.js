@@ -9,7 +9,7 @@ import TextBasic from '../Text/Basic';
 const CardHeader = ({ data }) => (
   <CardBasic
     cardContainerStyle={[GenericStyles.asc, GenericStyles.mb16]}
-    cardWrapperStyle={GenericStyles.fdr}
+    cardWrapperStyle={[GenericStyles.fdr, GenericStyles.aic]}
     isCenter>
     <IconBasic name={data.icon} color={StyleConstants.color.$BLUE} />
     <View style={GenericStyles.ml4}>

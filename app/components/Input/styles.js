@@ -1,10 +1,17 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import { StyleConstants } from '../../utils/GenericStyles';
 
 const styles = StyleSheet.create({
   inputContainer: {
     borderRadius: 5,
-    padding: 12,
+    ...Platform.select({
+      android: {
+        paddingHorizontal: 12,
+      },
+      ios: {
+        padding: 12,
+      },
+    }),
     borderWidth: 0.5,
     borderColor: StyleConstants.color.$GREY,
   },

@@ -1,6 +1,6 @@
 import React from 'react';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
-import { formatDate, formatTime } from '../../utils/helperFunc';
+import { formatDate, getMonth, getTimestamp } from '../../utils/helperFunc';
 
 const PickerBasic = ({
   mode,
@@ -9,15 +9,14 @@ const PickerBasic = ({
   hideDatePickerHandler,
 }) => {
   const handleConfirm = date => {
-    const dateObj = new Date(date);
     hideDatePickerHandler();
     confirmPickerHandler(
       mode === 'time'
-        ? { timestamp: dateObj.getTime(), time: formatTime(date) }
+        ? { timestamp: getTimestamp(date), time: formatDate('now', 'hh:mm a') }
         : {
-            timestamp: dateObj.getTime(),
-            date: formatDate(date),
-            month: dateObj.getMonth(),
+            timestamp: getTimestamp(date),
+            date: formatDate(date, 'YYYY-MM-DD'),
+            month: getMonth(date),
           },
     );
   };

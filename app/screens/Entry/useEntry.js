@@ -4,7 +4,7 @@ import { StyleConstants } from '../../utils/GenericStyles';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateHomeAction, updateTimelineAction } from '../../store/app/action';
-import { formatDate, formatDayjs, fromNowDayjs } from '../../utils/helperFunc';
+import { formatDate, getDateFromNow } from '../../utils/helperFunc';
 import { goBack } from '../../navigation/RootNavigation';
 
 const useEntry = () => {
@@ -65,9 +65,10 @@ const useEntry = () => {
               ? {
                   ...each,
                   lastUpdateDate: inputData.date.date,
-                  name: `${formatDate(inputData.date.date)}•${fromNowDayjs(
+                  name: `${formatDate(
                     inputData.date.date,
-                  )}`,
+                    'YYYY-DD-MM',
+                  )}•${getDateFromNow(inputData.date.date)}`,
                 }
               : each,
           ),
@@ -78,7 +79,7 @@ const useEntry = () => {
             {
               icon: 'gas',
               iconColor: StyleConstants.color.$BLUE,
-              heading: formatDayjs(inputData.date.date, 'DD MMMM YYYY'),
+              heading: formatDate(inputData.date.date, 'DD MMMM YYYY'),
               displayValue: inputData.cost,
               name: 'Refueling',
               initials: 'Rs.',
@@ -92,7 +93,7 @@ const useEntry = () => {
 
     dispatch(
       updateTimelineAction({
-        title: formatDayjs(inputData.date.timestamp, 'MMM YYYY'),
+        title: formatDate(inputData.date.timestamp, 'MMM YYYY'),
         key: inputData.date.month,
         lastPrice: parseFloat(inputData.price, 10),
         totalCost:
@@ -111,7 +112,7 @@ const useEntry = () => {
             cost: parseFloat(inputData.cost, 10),
             odometer: parseFloat(inputData.odometer, 10),
             displayOdometer: `${inputData.odometer} km`,
-            displayDate: formatDayjs(inputData.date.date, 'dddd, DD'),
+            displayDate: formatDate(inputData.date.date, 'dddd, DD'),
             id: Date.now(),
           },
         ],

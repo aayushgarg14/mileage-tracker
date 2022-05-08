@@ -14,6 +14,7 @@ const InputBasic = ({
   errorText,
   onBlurHandler,
   label,
+  pointerEvents,
   clickInputHandler,
   updateInputHandler,
   containerStyle,
@@ -48,6 +49,7 @@ const InputBasic = ({
           onBlur={onBlurHandler}
           keyboardType={keyboardType}
           blurOnSubmit
+          pointerEvents={pointerEvents || 'auto'}
           onChangeText={updateInputHandler}
           onPressIn={clickInputHandler}
         />
