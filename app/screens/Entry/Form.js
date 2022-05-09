@@ -48,6 +48,7 @@ const Form = ({
                 updateInputHandler={onChange}
                 testID="Odometer.Input"
                 errorTestID="Odometer.ErrorText"
+                bottomTestID="Odometer.BottomText"
               />
             )}
             rules={{
@@ -93,6 +94,8 @@ const Form = ({
                   errorText={errors?.gas?.message}
                   onBlur={onBlur}
                   updateInputHandler={onChangeHandler}
+                  testID="Gas.Input"
+                  errorTestID="Gas.ErrorText"
                 />
               );
             }}
@@ -110,6 +113,7 @@ const Form = ({
                 label="Gas type"
                 value="Regular"
                 disabled={true}
+                testID="GasType.Input"
               />
             )}
           />
@@ -148,6 +152,8 @@ const Form = ({
                   errorText={errors?.price?.message}
                   onBlur={onBlur}
                   updateInputHandler={onChangeHandler}
+                  testID="Price.Input"
+                  errorTestID="Price.ErrorText"
                 />
               );
             }}
@@ -164,6 +170,7 @@ const Form = ({
                 label="Total cost"
                 value={value}
                 disabled={true}
+                testID="Cost.Input"
               />
             )}
             rules={inputRules}
@@ -200,8 +207,7 @@ const Form = ({
                     disabled={true}
                     pointerEvents="none"
                     value={value?.date || formatDate('now', 'YYYY-MM-DD')}
-                    error={errors?.date}
-                    errorText={errors?.date?.message}
+                    testID="Date.Input"
                   />
                 </Pressable>
                 <PickerBasic
@@ -233,8 +239,7 @@ const Form = ({
                       focus={true}
                       disabled={true}
                       value={value?.time || formatDate('now', 'hh:mm A')}
-                      error={errors?.time}
-                      errorText={errors?.time?.message}
+                      testID="Time.Input"
                     />
                   </Pressable>
                   <PickerBasic

@@ -5,7 +5,7 @@ import { CardBasic, Container, IconBasic } from '../../components';
 import { GenericStyles } from '../../utils/GenericStyles';
 import useEntry from './useEntry';
 
-const AddEntryScreen = () => {
+const AddEntryScreen = ({ navigation }) => {
   const {
     formData: { control, handleSubmit, getValues, setValue, errors },
     isDatePickerVisible,
@@ -13,7 +13,7 @@ const AddEntryScreen = () => {
     submitHandler,
     toggleDatePickerHandler,
     toggleTimePickerHandler,
-  } = useEntry();
+  } = useEntry(navigation);
 
   const renderMainChild = () => {
     return (

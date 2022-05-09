@@ -9,9 +9,8 @@ import {
   getDateFromNow,
   getTimestamp,
 } from '../../utils/helperFunc';
-import { goBack } from '../../navigation/RootNavigation';
 
-const useEntry = () => {
+const useEntry = navigation => {
   const dispatch = useDispatch();
   const home = useSelector(state => state.app.home);
   const timeline = useSelector(state => state.app.timeline);
@@ -130,7 +129,7 @@ const useEntry = () => {
       }),
     );
 
-    goBack();
+    navigation.navigate('Home');
   };
 
   const toggleDatePickerHandler = () => {

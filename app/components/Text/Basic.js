@@ -14,6 +14,7 @@ const TextBasic = ({
   numberOfLines,
   onPress,
   textStyle,
+  ...props
 }) => (
   <Text
     maxFontSizeMultiplier={1}
@@ -28,7 +29,8 @@ const TextBasic = ({
       isLight && GenericStyles.lightColor,
       isBlue && GenericStyles.blueColor,
       textStyle,
-    ]}>
+    ]}
+    {...props}>
     {text}
   </Text>
 );

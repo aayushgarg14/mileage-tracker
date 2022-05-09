@@ -13,6 +13,7 @@ const InputBasic = ({
   error,
   errorText,
   errorTestID,
+  bottomTestID,
   onBlurHandler,
   label,
   pointerEvents,
@@ -59,7 +60,7 @@ const InputBasic = ({
       </View>
       {bottomText && (
         <View style={[GenericStyles.mt4, GenericStyles.ml4]}>
-          <TextBasic text={bottomText} isSmall isLight />
+          <TextBasic testID={bottomTestID} text={bottomText} isSmall isLight />
         </View>
       )}
       {error && (

@@ -4,13 +4,14 @@ import { FAB } from 'react-native-elements';
 import { StyleConstants } from '../../utils/GenericStyles';
 import IconBasic from '../Icon';
 
-const FabBasic = ({ onPress }) => {
+const FabBasic = ({ onPress, ...props }) => {
   return (
     <FAB
       color={StyleConstants.color.$BLUE}
       style={styles.container}
       icon={<IconBasic name="add" fontSize={24} color="white" />}
       onPress={onPress}
+      {...props}
     />
   );
 };

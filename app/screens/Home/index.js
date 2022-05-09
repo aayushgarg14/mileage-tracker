@@ -1,13 +1,17 @@
 import React from 'react';
 
 import { Container, FabBasic } from '../../components';
-import { navigate } from '../../navigation/RootNavigation';
 import { GenericStyles } from '../../utils/GenericStyles';
 import { Main } from './components';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const renderBottomChild = () => {
-    return <FabBasic onPress={() => navigate('AddEntry')} />;
+    return (
+      <FabBasic
+        onPress={() => navigation.navigate('AddEntry')}
+        testID="Home.Button"
+      />
+    );
   };
 
   const renderMainChild = () => {

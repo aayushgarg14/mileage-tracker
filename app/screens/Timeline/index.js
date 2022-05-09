@@ -2,16 +2,18 @@ import React from 'react';
 import { SectionList } from 'react-native';
 import { useSelector } from 'react-redux';
 
-import { navigate } from '../../navigation/RootNavigation';
 import { Container, EmptyBasic, FabBasic } from '../../components';
 import { GenericStyles } from '../../utils/GenericStyles';
 import { ItemContainer, ItemHeader } from './components';
 
-const TimelineScreen = () => {
+const TimelineScreen = ({ navigation }) => {
   const timeline = useSelector(state => state.app.timeline);
 
   const renderBottomChild = () => (
-    <FabBasic onPress={() => navigate('AddEntry')} />
+    <FabBasic
+      onPress={() => navigation.navigate('AddEntry')}
+      testID="Timeline.Button"
+    />
   );
 
   const renderEmpty = () => <EmptyBasic />;

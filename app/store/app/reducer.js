@@ -26,7 +26,9 @@ const appReducer = (state = INITIAL_STATE, action) => {
           ...state.timeline.slice(1),
         ];
       } else {
-        updatedData = [action.payload, ...state.timeline];
+        updatedData =
+          (action.payload && [action.payload, ...state.timeline]) ||
+          state.timeline;
       }
 
       return { ...state, timeline: updatedData };

@@ -1,0 +1,1911 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`navigates to the AddEntryScreen 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "backgroundColor": "#2E2F32",
+        "height": 40,
+      }
+    }
+  />,
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2E2F32",
+        "borderBottomWidth": 0,
+        "flexDirection": "row",
+        "height": 60,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 16,
+        "paddingVertical": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "alignItems": "center",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#FFF",
+                    "fontSize": 20,
+                  },
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  Object {
+                    "fontFamily": "Material Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+              testID="iconIcon"
+            >
+              
+            </Text>
+          </View>
+        </View>
+      </View>
+      <Text
+        maxFontSizeMultiplier={1}
+        style={
+          Array [
+            Object {
+              "color": "#FFF",
+              "fontSize": 14,
+              "letterSpacing": 0,
+            },
+            Object {
+              "fontWeight": "700",
+            },
+            Object {
+              "fontSize": 16,
+            },
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </View>,
+  <View
+    style={
+      Object {
+        "backgroundColor": "#202124",
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#202124",
+            "flex": 1,
+            "paddingTop": 20,
+          },
+          Object {
+            "paddingHorizontal": 16,
+          },
+        ]
+      }
+    >
+      <RCTScrollView
+        showsVerticalScrollIndicator={false}
+      >
+        <View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#2E2F32",
+                "borderColor": "#e1e8ee",
+                "borderRadius": 10,
+                "borderWidth": 0,
+                "justifyContent": "center",
+                "margin": 0,
+                "marginBottom": 16,
+                "padding": 12,
+                "shadowColor": "rgba(0,0,0, .2)",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <Text
+                      allowFontScaling={false}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#8AB4F8",
+                            "fontSize": 14,
+                          },
+                          Object {
+                            "backgroundColor": "transparent",
+                          },
+                          Object {
+                            "fontFamily": "Material Icons",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          Object {},
+                        ]
+                      }
+                      testID="iconIcon"
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "marginLeft": 4,
+                  }
+                }
+              >
+                <Text
+                  maxFontSizeMultiplier={1}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#FFF",
+                        "fontSize": 14,
+                        "letterSpacing": 0,
+                      },
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                    ]
+                  }
+                >
+                  Gas
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#2E2F32",
+                "borderColor": "#e1e8ee",
+                "borderRadius": 10,
+                "borderWidth": 0,
+                "margin": 0,
+                "marginBottom": 0,
+                "padding": 12,
+                "shadowColor": "rgba(0,0,0, .2)",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                }
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexDirection": "row",
+                    },
+                    Object {
+                      "alignItems": "center",
+                    },
+                    Object {
+                      "justifyContent": "space-between",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "flexDirection": "row",
+                      },
+                      Object {
+                        "alignItems": "center",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "overflow": "hidden",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "marginRight": 8,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "transparent",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <Text
+                          allowFontScaling={false}
+                          style={
+                            Array [
+                              Object {
+                                "color": "#8AB4F8",
+                                "fontSize": 14,
+                              },
+                              Object {
+                                "backgroundColor": "transparent",
+                              },
+                              Object {
+                                "fontFamily": "Material Icons",
+                                "fontStyle": "normal",
+                                "fontWeight": "normal",
+                              },
+                              Object {},
+                            ]
+                          }
+                          testID="iconIcon"
+                        >
+                          
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                  <Text
+                    maxFontSizeMultiplier={1}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FFF",
+                          "fontSize": 14,
+                          "letterSpacing": 0,
+                        },
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ]
+                    }
+                  >
+                    0
+                  </Text>
+                  <View
+                    style={
+                      Object {
+                        "marginLeft": 4,
+                      }
+                    }
+                  >
+                    <Text
+                      maxFontSizeMultiplier={1}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#FFF",
+                            "fontSize": 14,
+                            "letterSpacing": 0,
+                          },
+                          undefined,
+                          undefined,
+                          Object {
+                            "fontSize": 12,
+                          },
+                          undefined,
+                          Object {
+                            "color": "#676D70",
+                          },
+                          undefined,
+                          undefined,
+                        ]
+                      }
+                    >
+                      km/l
+                    </Text>
+                  </View>
+                </View>
+                <Text
+                  maxFontSizeMultiplier={1}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#FFF",
+                        "fontSize": 14,
+                        "letterSpacing": 0,
+                      },
+                      undefined,
+                      undefined,
+                      Object {
+                        "fontSize": 12,
+                      },
+                      undefined,
+                      Object {
+                        "color": "#676D70",
+                      },
+                      undefined,
+                      undefined,
+                    ]
+                  }
+                >
+                  Average fuel consumption
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "marginBottom": 16,
+                  }
+                }
+              />
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexDirection": "row",
+                    },
+                    Object {
+                      "alignItems": "center",
+                    },
+                    Object {
+                      "justifyContent": "space-between",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "flexDirection": "row",
+                      },
+                      Object {
+                        "alignItems": "center",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "overflow": "hidden",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "marginRight": 8,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "transparent",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <Text
+                          allowFontScaling={false}
+                          style={
+                            Array [
+                              Object {
+                                "color": "#8AB4F8",
+                                "fontSize": 14,
+                              },
+                              Object {
+                                "backgroundColor": "transparent",
+                              },
+                              Object {
+                                "fontFamily": "Material Icons",
+                                "fontStyle": "normal",
+                                "fontWeight": "normal",
+                              },
+                              Object {},
+                            ]
+                          }
+                          testID="iconIcon"
+                        >
+                          
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                  <Text
+                    maxFontSizeMultiplier={1}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FFF",
+                          "fontSize": 14,
+                          "letterSpacing": 0,
+                        },
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ]
+                    }
+                  >
+                    0
+                  </Text>
+                  <View
+                    style={
+                      Object {
+                        "marginLeft": 4,
+                      }
+                    }
+                  >
+                    <Text
+                      maxFontSizeMultiplier={1}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#FFF",
+                            "fontSize": 14,
+                            "letterSpacing": 0,
+                          },
+                          undefined,
+                          undefined,
+                          Object {
+                            "fontSize": 12,
+                          },
+                          undefined,
+                          Object {
+                            "color": "#676D70",
+                          },
+                          undefined,
+                          undefined,
+                        ]
+                      }
+                    >
+                      km/l
+                    </Text>
+                  </View>
+                </View>
+                <Text
+                  maxFontSizeMultiplier={1}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#FFF",
+                        "fontSize": 14,
+                        "letterSpacing": 0,
+                      },
+                      undefined,
+                      undefined,
+                      Object {
+                        "fontSize": 12,
+                      },
+                      undefined,
+                      Object {
+                        "color": "#676D70",
+                      },
+                      undefined,
+                      undefined,
+                    ]
+                  }
+                >
+                  Last fuel consumption
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "marginBottom": 16,
+                  }
+                }
+              />
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexDirection": "row",
+                    },
+                    Object {
+                      "alignItems": "center",
+                    },
+                    Object {
+                      "justifyContent": "space-between",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "flexDirection": "row",
+                      },
+                      Object {
+                        "alignItems": "center",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "overflow": "hidden",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "marginRight": 8,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "transparent",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <Text
+                          allowFontScaling={false}
+                          style={
+                            Array [
+                              Object {
+                                "color": "#8AB4F8",
+                                "fontSize": 14,
+                              },
+                              Object {
+                                "backgroundColor": "transparent",
+                              },
+                              Object {
+                                "fontFamily": "Material Icons",
+                                "fontStyle": "normal",
+                                "fontWeight": "normal",
+                              },
+                              Object {},
+                            ]
+                          }
+                          testID="iconIcon"
+                        >
+                          
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                  <Text
+                    maxFontSizeMultiplier={1}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FFF",
+                          "fontSize": 14,
+                          "letterSpacing": 0,
+                        },
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ]
+                    }
+                  >
+                    Rs.
+                  </Text>
+                  <Text
+                    maxFontSizeMultiplier={1}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FFF",
+                          "fontSize": 14,
+                          "letterSpacing": 0,
+                        },
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ]
+                    }
+                  >
+                    0
+                  </Text>
+                </View>
+                <Text
+                  maxFontSizeMultiplier={1}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#FFF",
+                        "fontSize": 14,
+                        "letterSpacing": 0,
+                      },
+                      undefined,
+                      undefined,
+                      Object {
+                        "fontSize": 12,
+                      },
+                      undefined,
+                      Object {
+                        "color": "#676D70",
+                      },
+                      undefined,
+                      undefined,
+                    ]
+                  }
+                >
+                  Last fuel price
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#2E2F32",
+                  "borderColor": "#e1e8ee",
+                  "borderRadius": 10,
+                  "borderWidth": 0,
+                  "justifyContent": "center",
+                  "margin": 0,
+                  "marginBottom": 16,
+                  "padding": 12,
+                  "shadowColor": "rgba(0,0,0, .2)",
+                  "shadowOffset": Object {
+                    "height": 0,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  <View>
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <Text
+                        allowFontScaling={false}
+                        style={
+                          Array [
+                            Object {
+                              "color": "#8AB4F8",
+                              "fontSize": 14,
+                            },
+                            Object {
+                              "backgroundColor": "transparent",
+                            },
+                            Object {
+                              "fontFamily": "Material Design Icons",
+                              "fontStyle": "normal",
+                              "fontWeight": "normal",
+                            },
+                            Object {},
+                          ]
+                        }
+                        testID="iconIcon"
+                      >
+                        󰆯
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "marginLeft": 4,
+                    }
+                  }
+                >
+                  <Text
+                    maxFontSizeMultiplier={1}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FFF",
+                          "fontSize": 14,
+                          "letterSpacing": 0,
+                        },
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ]
+                    }
+                  >
+                    Costs
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#2E2F32",
+                  "borderColor": "#e1e8ee",
+                  "borderRadius": 10,
+                  "borderWidth": 0,
+                  "margin": 0,
+                  "marginBottom": 0,
+                  "padding": 12,
+                  "shadowColor": "rgba(0,0,0, .2)",
+                  "shadowOffset": Object {
+                    "height": 0,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 8,
+                    }
+                  }
+                >
+                  <Text
+                    maxFontSizeMultiplier={1}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FFF",
+                          "fontSize": 14,
+                          "letterSpacing": 0,
+                        },
+                        undefined,
+                        undefined,
+                        Object {
+                          "fontSize": 12,
+                        },
+                        undefined,
+                        Object {
+                          "color": "#676D70",
+                        },
+                        undefined,
+                        undefined,
+                      ]
+                    }
+                  >
+                    THIS MONTH
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "flexDirection": "row",
+                      },
+                      Object {
+                        "alignItems": "center",
+                      },
+                      Object {
+                        "justifyContent": "space-between",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "flexDirection": "row",
+                        },
+                        Object {
+                          "alignItems": "center",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "marginRight": 8,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "transparent",
+                              "justifyContent": "center",
+                            }
+                          }
+                        >
+                          <Text
+                            allowFontScaling={false}
+                            style={
+                              Array [
+                                Object {
+                                  "color": "#8AB4F8",
+                                  "fontSize": 14,
+                                },
+                                Object {
+                                  "backgroundColor": "transparent",
+                                },
+                                Object {
+                                  "fontFamily": "Material Icons",
+                                  "fontStyle": "normal",
+                                  "fontWeight": "normal",
+                                },
+                                Object {},
+                              ]
+                            }
+                            testID="iconIcon"
+                          >
+                            
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                    <Text
+                      maxFontSizeMultiplier={1}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#FFF",
+                            "fontSize": 14,
+                            "letterSpacing": 0,
+                          },
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                        ]
+                      }
+                    >
+                      Rs.
+                    </Text>
+                    <Text
+                      maxFontSizeMultiplier={1}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#FFF",
+                            "fontSize": 14,
+                            "letterSpacing": 0,
+                          },
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                        ]
+                      }
+                    >
+                      0.00
+                    </Text>
+                  </View>
+                  <Text
+                    maxFontSizeMultiplier={1}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FFF",
+                          "fontSize": 14,
+                          "letterSpacing": 0,
+                        },
+                        undefined,
+                        undefined,
+                        Object {
+                          "fontSize": 12,
+                        },
+                        undefined,
+                        Object {
+                          "color": "#676D70",
+                        },
+                        undefined,
+                        undefined,
+                      ]
+                    }
+                  >
+                    Gas
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "flexDirection": "row",
+                      },
+                      Object {
+                        "alignItems": "center",
+                      },
+                      Object {
+                        "justifyContent": "space-between",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "flexDirection": "row",
+                        },
+                        Object {
+                          "alignItems": "center",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "marginRight": 8,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "transparent",
+                              "justifyContent": "center",
+                            }
+                          }
+                        >
+                          <Text
+                            allowFontScaling={false}
+                            style={
+                              Array [
+                                Object {
+                                  "color": "#8AB4F8",
+                                  "fontSize": 14,
+                                },
+                                Object {
+                                  "backgroundColor": "transparent",
+                                },
+                                Object {
+                                  "fontFamily": "Material Design Icons",
+                                  "fontStyle": "normal",
+                                  "fontWeight": "normal",
+                                },
+                                Object {},
+                              ]
+                            }
+                            testID="iconIcon"
+                          >
+                            󰄕
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                    <Text
+                      maxFontSizeMultiplier={1}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#FFF",
+                            "fontSize": 14,
+                            "letterSpacing": 0,
+                          },
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                        ]
+                      }
+                    >
+                      Rs.
+                    </Text>
+                    <Text
+                      maxFontSizeMultiplier={1}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#FFF",
+                            "fontSize": 14,
+                            "letterSpacing": 0,
+                          },
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                        ]
+                      }
+                    >
+                      0.00
+                    </Text>
+                  </View>
+                  <Text
+                    maxFontSizeMultiplier={1}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FFF",
+                          "fontSize": 14,
+                          "letterSpacing": 0,
+                        },
+                        undefined,
+                        undefined,
+                        Object {
+                          "fontSize": 12,
+                        },
+                        undefined,
+                        Object {
+                          "color": "#676D70",
+                        },
+                        undefined,
+                        undefined,
+                      ]
+                    }
+                  >
+                    Other costs
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 8,
+                    }
+                  }
+                >
+                  <Text
+                    maxFontSizeMultiplier={1}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FFF",
+                          "fontSize": 14,
+                          "letterSpacing": 0,
+                        },
+                        undefined,
+                        undefined,
+                        Object {
+                          "fontSize": 12,
+                        },
+                        undefined,
+                        Object {
+                          "color": "#676D70",
+                        },
+                        undefined,
+                        undefined,
+                      ]
+                    }
+                  >
+                    PREVIOUS MONTH
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "flexDirection": "row",
+                      },
+                      Object {
+                        "alignItems": "center",
+                      },
+                      Object {
+                        "justifyContent": "space-between",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "flexDirection": "row",
+                        },
+                        Object {
+                          "alignItems": "center",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "marginRight": 8,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "transparent",
+                              "justifyContent": "center",
+                            }
+                          }
+                        >
+                          <Text
+                            allowFontScaling={false}
+                            style={
+                              Array [
+                                Object {
+                                  "color": "#8AB4F8",
+                                  "fontSize": 14,
+                                },
+                                Object {
+                                  "backgroundColor": "transparent",
+                                },
+                                Object {
+                                  "fontFamily": "Material Icons",
+                                  "fontStyle": "normal",
+                                  "fontWeight": "normal",
+                                },
+                                Object {},
+                              ]
+                            }
+                            testID="iconIcon"
+                          >
+                            
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                    <Text
+                      maxFontSizeMultiplier={1}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#FFF",
+                            "fontSize": 14,
+                            "letterSpacing": 0,
+                          },
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                        ]
+                      }
+                    >
+                      Rs.
+                    </Text>
+                    <Text
+                      maxFontSizeMultiplier={1}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#FFF",
+                            "fontSize": 14,
+                            "letterSpacing": 0,
+                          },
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                        ]
+                      }
+                    >
+                      0.00
+                    </Text>
+                  </View>
+                  <Text
+                    maxFontSizeMultiplier={1}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FFF",
+                          "fontSize": 14,
+                          "letterSpacing": 0,
+                        },
+                        undefined,
+                        undefined,
+                        Object {
+                          "fontSize": 12,
+                        },
+                        undefined,
+                        Object {
+                          "color": "#676D70",
+                        },
+                        undefined,
+                        undefined,
+                      ]
+                    }
+                  >
+                    Gas
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "flexDirection": "row",
+                      },
+                      Object {
+                        "alignItems": "center",
+                      },
+                      Object {
+                        "justifyContent": "space-between",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "flexDirection": "row",
+                        },
+                        Object {
+                          "alignItems": "center",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "marginRight": 8,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "transparent",
+                              "justifyContent": "center",
+                            }
+                          }
+                        >
+                          <Text
+                            allowFontScaling={false}
+                            style={
+                              Array [
+                                Object {
+                                  "color": "#8AB4F8",
+                                  "fontSize": 14,
+                                },
+                                Object {
+                                  "backgroundColor": "transparent",
+                                },
+                                Object {
+                                  "fontFamily": "Material Design Icons",
+                                  "fontStyle": "normal",
+                                  "fontWeight": "normal",
+                                },
+                                Object {},
+                              ]
+                            }
+                            testID="iconIcon"
+                          >
+                            󰄕
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                    <Text
+                      maxFontSizeMultiplier={1}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#FFF",
+                            "fontSize": 14,
+                            "letterSpacing": 0,
+                          },
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                        ]
+                      }
+                    >
+                      Rs.
+                    </Text>
+                    <Text
+                      maxFontSizeMultiplier={1}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#FFF",
+                            "fontSize": 14,
+                            "letterSpacing": 0,
+                          },
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                          undefined,
+                        ]
+                      }
+                    >
+                      0.00
+                    </Text>
+                  </View>
+                  <Text
+                    maxFontSizeMultiplier={1}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FFF",
+                          "fontSize": 14,
+                          "letterSpacing": 0,
+                        },
+                        undefined,
+                        undefined,
+                        Object {
+                          "fontSize": 12,
+                        },
+                        undefined,
+                        Object {
+                          "color": "#676D70",
+                        },
+                        undefined,
+                        undefined,
+                      ]
+                    }
+                  >
+                    Other costs
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#2E2F32",
+                  "borderColor": "#e1e8ee",
+                  "borderRadius": 10,
+                  "borderWidth": 0,
+                  "justifyContent": "center",
+                  "margin": 0,
+                  "marginBottom": 16,
+                  "padding": 12,
+                  "shadowColor": "rgba(0,0,0, .2)",
+                  "shadowOffset": Object {
+                    "height": 0,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  <View>
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <Text
+                        allowFontScaling={false}
+                        style={
+                          Array [
+                            Object {
+                              "color": "#8AB4F8",
+                              "fontSize": 14,
+                            },
+                            Object {
+                              "backgroundColor": "transparent",
+                            },
+                            Object {
+                              "fontFamily": "Material Icons",
+                              "fontStyle": "normal",
+                              "fontWeight": "normal",
+                            },
+                            Object {},
+                          ]
+                        }
+                        testID="iconIcon"
+                      >
+                        
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "marginLeft": 4,
+                    }
+                  }
+                >
+                  <Text
+                    maxFontSizeMultiplier={1}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FFF",
+                          "fontSize": 14,
+                          "letterSpacing": 0,
+                        },
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ]
+                    }
+                  >
+                    Last entries
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#2E2F32",
+                  "borderColor": "#e1e8ee",
+                  "borderRadius": 10,
+                  "borderWidth": 0,
+                  "margin": 0,
+                  "marginBottom": 0,
+                  "padding": 12,
+                  "shadowColor": "rgba(0,0,0, .2)",
+                  "shadowOffset": Object {
+                    "height": 0,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "marginBottom": 16,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <Text
+                        allowFontScaling={false}
+                        style={
+                          Array [
+                            Object {
+                              "color": "#676D70",
+                              "fontSize": 36,
+                            },
+                            Object {
+                              "backgroundColor": "transparent",
+                            },
+                            Object {
+                              "fontFamily": "Material Icons",
+                              "fontStyle": "normal",
+                              "fontWeight": "normal",
+                            },
+                            Object {},
+                          ]
+                        }
+                        testID="iconIcon"
+                      >
+                        
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <Text
+                  maxFontSizeMultiplier={1}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#FFF",
+                        "fontSize": 14,
+                        "letterSpacing": 0,
+                      },
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Object {
+                        "color": "#676D70",
+                      },
+                      undefined,
+                      Object {
+                        "textAlign": "center",
+                      },
+                    ]
+                  }
+                >
+                  No data available
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "height": 60,
+              }
+            }
+          />
+        </View>
+      </RCTScrollView>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderRadius": 28,
+          "bottom": 16,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "opacity": 1,
+          "position": "absolute",
+          "right": 16,
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+          ],
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 3,
+              "overflow": "hidden",
+            },
+            Object {
+              "borderRadius": 3,
+            },
+            Object {
+              "borderRadius": 28,
+              "elevation": 4,
+            },
+            false,
+          ]
+        }
+      >
+        <View
+          accessibilityRole="button"
+          accessibilityState={
+            Object {
+              "busy": false,
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="Home.Button"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#8AB4F8",
+                "borderColor": "#2089dc",
+                "borderRadius": 3,
+                "borderWidth": 0,
+                "flexDirection": "row",
+                "height": 56,
+                "justifyContent": "center",
+                "padding": 16,
+                "width": 56,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Text
+                    allowFontScaling={false}
+                    style={
+                      Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 24,
+                        },
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                        Object {
+                          "fontFamily": "Material Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
+                    }
+                    testID="iconIcon"
+                  >
+                    
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>,
+]
+`;
