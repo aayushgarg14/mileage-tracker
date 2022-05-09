@@ -238,6 +238,7 @@ const Form = ({
                       label="Time"
                       focus={true}
                       disabled={true}
+                      pointerEvents="none"
                       value={value?.time || formatDate('now', 'hh:mm A')}
                       testID="Time.Input"
                     />
